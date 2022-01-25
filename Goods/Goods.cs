@@ -11,5 +11,11 @@ namespace SmallTeachShop
         abstract public string Titel { get; }
         abstract public string Manufacturer { get; }
         abstract public decimal Price { get; }
+
+        public void show() 
+        {
+            Console.WriteLine($"{Titel},{Manufacturer},{Price}");
+        }
+
     }
 }
