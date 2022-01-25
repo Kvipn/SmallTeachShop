@@ -8,10 +8,7 @@ namespace SmallTeachShop
 {
     internal static class Storage
     {
-        static List<Goods> goodsList = new List<Goods>();
-        //static List<Beverage> beverageList = new List<Beverage>();
-        //static List<ChocolatBar> chocolatList = new List<ChocolatBar>();
-        //static List<Snack> snackList = new List<Snack>();        
+        static List<Goods> goodsList = new List<Goods>();        
         
         static public void addGoods(Goods goods)
         {
@@ -21,7 +18,10 @@ namespace SmallTeachShop
         {
             goodsList.AddRange(goods);
         }
-
+        static public void deleteGoods(Goods goods)
+        {
+            Console.WriteLine( goodsList.Remove(goods));
+        }
 
         static public void Show()
         {
