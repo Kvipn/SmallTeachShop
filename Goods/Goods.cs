@@ -9,8 +9,7 @@ namespace SmallTeachShop
     abstract internal class Goods
     {
         abstract public string Titel { get; }
-        abstract public string Manufacturer { get; }
-        abstract public decimal Price { get; }
+        abstract public double Price { get; }
 
         public override string ToString()
         {
@@ -18,7 +17,7 @@ namespace SmallTeachShop
         }
         public void show() 
         {
-            Console.WriteLine($"{Titel},{Manufacturer},{Price}");
+            Console.WriteLine($"{Titel},{Price}");
         }
 
     }

@@ -8,14 +8,7 @@ namespace main
     {
         public static void Main()
         {
-            Dictionary<Goods,int> goods = new Dictionary<Goods,int>();
-            Snack snack = new Snack("Pringls", "ASd", 2);
-            goods.Add(snack, 10);
-            goods[snack] += 1;
-            foreach (var item in goods)
-            {
-                Console.WriteLine($"{item.Key.ToString()}, {item.Value}");
-            }
+            
         }
     }
 }

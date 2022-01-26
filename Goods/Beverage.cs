@@ -8,15 +8,13 @@ namespace SmallTeachShop
 {
     internal class Beverage : Goods
     {
-        public Beverage(string titel, string manufacturer, decimal price)
+        public Beverage(string titel, double price)
         {
             Titel = titel;
-            Manufacturer = manufacturer;
             Price = price;
         }
 
         public override string Titel { get; }
-        public override string Manufacturer { get; }
-        public override decimal Price { get; }        
+        public override double Price { get; }        
     }
 }
