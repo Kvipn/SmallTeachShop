@@ -10,21 +10,31 @@ namespace main
         {
             List<Goods> goodsList = new List<Goods>();
 
-            Storage.AddElementAssortment(new Snack("Pringls", 5.5), 12);
-            Storage.DeleteElementAssortment(new Snack(" ", 1));
+            goodsList.Add(AddElementGoodList());
+
+            Storage.AddElementAssortment(goodsList[0],10);
+
             Storage.Show();
         }
 
-        public static void AddElementGoodList()
+        public static Goods AddElementGoodList()
         {
-            string input = Console.ReadLine();
-
-            switch (input)
+            IGoodsFactory[] goodsFactory = new IGoodsFactory[]
             {
-                case "Beverage": break;
-                case "Snack": break;
-                case "ChocolatBar": break;
-                default: break;
+                new BeverageFactory(),
+                new ChocolatBarFactory(),
+                new SnackFactory()
+            };
+
+            Console.WriteLine("1 - для добавления напитка\r\n2 - для добавления батончика\r\n3 - для добавления закуски");
+            int choise = int.Parse(Console.ReadLine());
+
+            switch (choise)
+            {
+                case 1: return goodsFactory[choise-1].Create();
+                case 2: return goodsFactory[choise - 2].Create();
+                case 3: return goodsFactory[choise - 3].Create();
+                default: return null;
             }
 
         }

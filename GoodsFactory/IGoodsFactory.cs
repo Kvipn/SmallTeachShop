@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmallTeachShop.GoodsFactory
+namespace SmallTeachShop
 {
     internal interface IGoodsFactory
     {

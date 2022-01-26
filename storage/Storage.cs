@@ -15,7 +15,7 @@ namespace SmallTeachShop
         }
         static public void DeleteElementAssortment(Goods goods)
         {
-            
+            assortment.Remove(goods);
         }
 
         //static private bool CheckMethod(Goods goods)
@@ -32,6 +32,7 @@ namespace SmallTeachShop
 
         static public void Show()
         {
+            Console.WriteLine("Ассортимент:");
             foreach (var item in assortment)
             {
                 Console.WriteLine($"{item.Key.ToString()} - {item.Value}");

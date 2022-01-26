@@ -4,9 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmallTeachShop.GoodsFactory
+namespace SmallTeachShop
 {
-    internal class ChocolatBarFactory
+    internal class ChocolatBarFactory : IGoodsFactory
     {
+        public Goods Create()
+        {
+            Console.WriteLine("Введите название: ");
+            string titel = Console.ReadLine();
+            Console.WriteLine("Введите стоимость: ");
+            double price = double.Parse(Console.ReadLine());
+            return new ChocolatBar(titel, price);            
+        }
     }
 }
