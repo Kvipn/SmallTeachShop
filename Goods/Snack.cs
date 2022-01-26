@@ -16,11 +16,7 @@ namespace SmallTeachShop
         }
 
         public override string Titel { get; }
-
         public override string Manufacturer { get; }
-
         public override decimal Price { get; }
-
-
     }
 }

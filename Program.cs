@@ -8,18 +8,13 @@ namespace main
     {
         public static void Main()
         {
-            List<Goods> goodsList = new List<Goods>();
-            goodsList.Add(new Snack("1","1",1));
-            goodsList.Add(new Snack("1","1",1));
-            Snack snack = new Snack("1", "1", 1);
-            goodsList.Add(snack);
-            goodsList.Remove(snack);
-            goodsList.Remove(snack);
-            goodsList.Remove(snack);
-
-            foreach (var item in goodsList)
+            Dictionary<Goods,int> goods = new Dictionary<Goods,int>();
+            Snack snack = new Snack("Pringls", "ASd", 2);
+            goods.Add(snack, 10);
+            goods[snack] += 1;
+            foreach (var item in goods)
             {
-                Console.WriteLine(item.ToString());
+                Console.WriteLine($"{item.Key.ToString()}, {item.Value}");
             }
         }
     }

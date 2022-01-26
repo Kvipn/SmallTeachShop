@@ -12,6 +12,10 @@ namespace SmallTeachShop
         abstract public string Manufacturer { get; }
         abstract public decimal Price { get; }
 
+        public override string ToString()
+        {
+            return $"{Titel} {Price}";
+        }
         public void show() 
         {
             Console.WriteLine($"{Titel},{Manufacturer},{Price}");
